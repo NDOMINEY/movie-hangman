@@ -1,31 +1,87 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Movie Hangman
 
-Welcome NDOMINEY,
+Intro
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
 
-## Reminders
+## Table of Contents
++ [Requirements](#requirements "Requirements")
++ [Design](#design "Design")
+  + [Wireframes](#wireframes "Wireframes")
+  + [Colour Scheme](#colour-scheme "Colour Scheme")
+  + [Typography](#typography "Typography")
+  + [Imagery](#imagery "Imagery")
++ [Features](#features "Features")
+  + [Existing Features](#existing-features "Existing Features")
++ [Testing](#testing "Testing")
+  + [Development Process](#development-process "Development Process")
+  + [Usability Testing](#usability-testing "Usability Testing")
+  + [User Requirement Testing](#user-requirement-testing "User Requirement Testing")
+  + [Functional Testing](#functional-testing "Functional Testing")
+  + [Validator Testing](#validator-testing "Validator Testing")
+  + [Unfixed Bugs](#unfixed-bugs "Unfixed Bugs")
++ [Technologies Used](#technologies-used "Technologies Used")
+  + [Main Languages Used](#main-languages-used "Main Languages Used")
++ [Deployment](#deployment "Deployment")
++ [Credits](#credits "Credits")
+  + [Content](#content "Content")
+  + [Media](#media "Media")
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+## Requirements
 
-## Creating the Heroku app
+## Design
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+### Wireframes:
 
-1. `heroku/python`
-2. `heroku/nodejs`
+### Colour Scheme:
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+### Typography:
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+### Imagery:
 
-Connect your GitHub repository and deploy as normal.
+## Features
 
-## Constraints
+### Existing Features
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+### Future Features:
 
------
-Happy coding!
+## Testing
+
+### Development Process
+
+#### Random Letter Generator
+
+#### Time Challenge - Count Down
+
+#### Reading Exisiting High Score
+
+#### Storing Seperate High Scores
+
+### Usability Testing
+
+### User Requirement Testing
+
+### Functional Testing
+
+### Validator Testing
+
+### Unfixed Bugs
+
+## Technologies Used
+
+### Main Languages Used
+- Python
+
+## Deployment
+This site is deployed through GitHub Pages. The following steps where followed -
+- Within the repository, go to settings
+- Under settings select pages section
+- Select source 'Deploy from a branch'
+- Underneath source, select main branch and root folder and save to deploy
+
+#### Future development
+
+## Credits
+
+### Content
+
+### Media
