@@ -1,8 +1,21 @@
 """imports system for ascii escape codes readability"""
 import os
 import time
+import platform
+
 
 os.system("")
+
+
+def clr_scr():
+    """ function  to clear screen """
+
+    if platform.system().lower() == "windows":
+        cmd = 'cls'
+    else:
+        cmd = 'clear'
+
+    os.system(cmd)
 
 
 class TextFormatting:
@@ -36,7 +49,7 @@ class TextFormatting:
         """ Adds seconds between letter print in console """
         for letter in self.text:
             print(letter, end="", flush=True)
-            time.sleep(0.06)
+            time.sleep(0.05)
 
 
 # Instances of text formatting class
@@ -71,13 +84,15 @@ print(selection.color_ascii())
 def select_mode():
     """ User selects mode to play from """
 
-    input_prompt = "Please enter the genre of movie you would like to play: "
+    prompt_str = "Please enter the genre of movie you would like to play"
+    input_prompt = TextFormatting(prompt_str)
     choices = ("disney", "horror", "comedy", "sci-fi")
 
     while True:
 
         try:
-            user_choice = input(input_prompt).strip().lower()
+            input_prompt.type_delay()
+            user_choice = input("  =>  ").strip().lower()
         except ValueError:
             print("Please try again... ")
             continue
@@ -85,10 +100,12 @@ def select_mode():
         if user_choice not in choices:
             print("""
 Ooops! That doesn't match an option!
-
-Please try either disney, comedy, sci-fi, or horror...
+Choices are either disney, comedy, sci-fi, or horror...
 """)
         else:
+            print("\nGreat Choice! Let's Go!")
+            time.sleep(2)
+            clr_scr()
             return user_choice
 
 
