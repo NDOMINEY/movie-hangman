@@ -5,13 +5,13 @@ import time
 os.system("")
 
 
-class AnsciiFormatting:
+class TextFormatting:
     """ take in name of ascii file for formatting"""
 
     def __init__(self, text):
         self.text = text
 
-    def color_anscii(self):
+    def color_ascii(self):
         """ replaces color with ascii escape codes"""
 
         font_colors = {
@@ -25,31 +25,24 @@ class AnsciiFormatting:
 
         file = f"./assets/ascii_docs/{self.text}.txt"
         content = open(file, "r", encoding="utf-8")
-        anscii = "".join(content.readlines())
+        data = "".join(content.readlines())
 
         for color, code in font_colors.items():
-            anscii = anscii.replace("[[" + color + "]]", code)
+            data = data.replace("[[" + color + "]]", code)
 
-        return anscii
+        return data
 
-
-# Instances of ascii class
-title = AnsciiFormatting("title")
-selection = AnsciiFormatting("movie_selection")
-
-
-# text time delay
-def type_delay(text):
-    """ Adds seconds between letter print in console """
-    for letter in text:
-        print(letter, end="", flush=True)
-        time.sleep(0.06)
+    def type_delay(self):
+        """ Adds seconds between letter print in console """
+        for letter in self.text:
+            print(letter, end="", flush=True)
+            time.sleep(0.06)
 
 
-# Game introduction
-print(title.color_anscii())
-
-INTRO = """
+# Instances of text formatting class
+title = TextFormatting("title")
+selection = TextFormatting("movie_selection")
+intro = TextFormatting("""
 
 Lets play Hangman!
 
@@ -61,12 +54,18 @@ If you make an incorrect guess then you loose one of your 9 lives.
 
 Please see below movie genres to choose from...
 
-"""
+""")
 
-type_delay(INTRO)
+
+# Game introduction
+print(title.color_ascii())
+
+
+# type_delay(INTRO)
+intro.type_delay()
 
 time.sleep(0.5)
-print(selection.color_anscii())
+print(selection.color_ascii())
 
 
 def select_mode():
