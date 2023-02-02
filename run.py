@@ -35,6 +35,7 @@ class AnsciiFormatting:
 
 # Instances of ascii class
 title = AnsciiFormatting("title")
+selection = AnsciiFormatting("movie_selection")
 
 
 # text time delay
@@ -42,7 +43,7 @@ def type_delay(text):
     """ Adds seconds between letter print in console """
     for letter in text:
         print(letter, end="", flush=True)
-        time.sleep(0.075)
+        time.sleep(0.06)
 
 
 # Game introduction
@@ -59,6 +60,37 @@ You can guess one letter at a time and if correct you will see it appear!
 If you make an incorrect guess then you loose one of your 9 lives.
 
 Please see below movie genres to choose from...
+
 """
 
 type_delay(INTRO)
+
+time.sleep(0.5)
+print(selection.color_anscii())
+
+
+def select_mode():
+    """ User selects mode to play from """
+
+    input_prompt = "Please enter the genre of movie you would like to play: "
+    choices = ("disney", "horror", "comedy", "sci-fi")
+
+    while True:
+
+        try:
+            user_choice = input(input_prompt).strip().lower()
+        except ValueError:
+            print("Please try again... ")
+            continue
+
+        if user_choice not in choices:
+            print("""
+Ooops! That doesn't match an option!
+
+Please try either disney, comedy, sci-fi, or horror...
+""")
+        else:
+            return user_choice
+
+
+select_mode()
