@@ -49,7 +49,7 @@ class TextFormatting:
         """ Adds seconds between letter print in console """
         for letter in self.text:
             print(letter, end="", flush=True)
-            time.sleep(0.05)
+            time.sleep(0.04)
 
 
 # Instances of text formatting class
@@ -70,15 +70,15 @@ Please see below movie genres to choose from...
 """)
 
 
-# Game introduction
-print(title.color_ascii())
+def game_intro():
+    """ main intro to game """
 
+    print(title.color_ascii())
+    intro.type_delay()
+    time.sleep(0.5)
 
-# type_delay(INTRO)
-intro.type_delay()
-
-time.sleep(0.5)
-print(selection.color_ascii())
+    # print movie genre ascii
+    print(selection.color_ascii())
 
 
 def select_mode():
@@ -109,4 +109,5 @@ Choices are either disney, comedy, sci-fi, or horror...
             return user_choice
 
 
+game_intro()
 select_mode()
