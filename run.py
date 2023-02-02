@@ -35,4 +35,20 @@ class AnsciiFormatting:
 title = AnsciiFormatting("title")
 
 
+# Game introduction
 print(title.color_anscii())
+
+INTRO = """
+
+Lets play Hangman!
+
+The rules are simple, the object of the game is to guess the
+title of the movie.
+
+You can guess one letter at a time and if correct you will see it appear!
+If you make an incorrect guess then you loose one of your 9 lives.
+
+Please see below movie genres to choose from...
+"""
+
+print(INTRO)
