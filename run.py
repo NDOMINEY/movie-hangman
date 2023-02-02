@@ -1,5 +1,6 @@
 """imports system for ascii escape codes readability"""
 import os
+import time
 
 os.system("")
 
@@ -32,7 +33,16 @@ class AnsciiFormatting:
         return anscii
 
 
+# Instances of ascii class
 title = AnsciiFormatting("title")
+
+
+# text time delay
+def type_delay(text):
+    """ Adds seconds between letter print in console """
+    for letter in text:
+        print(letter, end="", flush=True)
+        time.sleep(0.075)
 
 
 # Game introduction
@@ -51,4 +61,4 @@ If you make an incorrect guess then you loose one of your 9 lives.
 Please see below movie genres to choose from...
 """
 
-print(INTRO)
+type_delay(INTRO)
