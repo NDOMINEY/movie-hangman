@@ -2,6 +2,7 @@
 import os
 import time
 import platform
+import random
 
 
 os.system("")
@@ -126,11 +127,20 @@ def run_game():
     """ Runs though game """
 
     user_choice = select_mode()
+    # selects correct file for user choice
     word_file = f"./assets/word_selections/{user_choice}_movies.txt"
     movie_mode = open(word_file, "r", encoding="utf-8")
     word_list = movie_mode.readlines()
 
-    print(word_list)
+    # select random word for game play
+    word = random.choice(word_list).lower()[:-1]
+
+    # create empty list to hold guesses, includes space
+    guesses = [" "]
+
+    # starting lives for game
+    guesses_remaining = 9
+    print(word)
 
 
 game_intro()
