@@ -56,6 +56,8 @@ class TextFormatting:
 # Instances of text formatting class
 title = TextFormatting("title")
 selection = TextFormatting("movie_selection")
+winner = TextFormatting("winner")
+game_over = TextFormatting("hangman0")
 intro = TextFormatting("""
 
 Lets play Hangman!
@@ -178,13 +180,23 @@ def run_game():
             guesses_remaining = guesses_remaining - 1
 
             if guesses_remaining == 0:
-                print(hangman.color_ascii())
+                clr_scr()
+                print(game_over.color_ascii())
                 continue
         else:
             word_check = word_complete(word, guesses)
 
             if word_check == "complete":
-                print("Correct")
+                clr_scr()
+                print(winner.color_ascii())
+
+                # slow type text
+                slow_text = "You correctly guessed the movie..."
+                show_movie = TextFormatting(slow_text)
+                show_movie.type_delay()
+                time.sleep(0.5)
+                print("")
+                print(word + "\n")
                 guesses_remaining = 0
                 continue
 
