@@ -142,6 +142,8 @@ def run_game():
     guesses_remaining = 9
     print(word)
 
+    print_word(word, guesses)
+
 
 game_intro()
 run_game()
