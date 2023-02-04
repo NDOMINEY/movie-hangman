@@ -109,5 +109,16 @@ Choices are either Disney, Comedy, Sci-Fi, or Horror...
             return user_choice
 
 
+def run_game():
+    """ Runs though game """
+
+    user_choice = select_mode()
+    word_file = f"./assets/word_selections/{user_choice}_movies.txt"
+    movie_mode = open(word_file, "r", encoding="utf-8")
+    word_list = movie_mode.readlines()
+
+    print(word_list)
+
+
 game_intro()
-select_mode()
+run_game()
