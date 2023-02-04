@@ -100,7 +100,7 @@ def select_mode():
         if user_choice not in choices:
             print("""
 Ooops! That doesn't match an option!
-Choices are either disney, comedy, sci-fi, or horror...
+Choices are either Disney, Comedy, Sci-Fi, or Horror...
 """)
         else:
             print("\nGreat Choice! Let's Go!")
