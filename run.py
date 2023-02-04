@@ -109,6 +109,19 @@ Choices are either Disney, Comedy, Sci-Fi, or Horror...
             return user_choice
 
 
+def print_word(word, guesses):
+    """creates hang man display after guess for player"""
+    result = []
+    for letter in word:
+        if letter in guesses:
+            result.append(letter + " ")
+        else:
+            result.append("_ ")
+
+    display = "".join(result)
+    print("\n"+display+"\n")
+
+
 def run_game():
     """ Runs though game """
 
