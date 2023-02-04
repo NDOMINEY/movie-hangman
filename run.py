@@ -164,6 +164,7 @@ def run_game():
 
     print_word(word, guesses)
 
+    # request user letter guesses
     while guesses_remaining > 0:
         guess = input("Guess a letter: ").lower()
 
@@ -173,12 +174,18 @@ def run_game():
             guesses_remaining = guesses_remaining - 1
 
             if guesses_remaining == 0:
+                print("Game Over!")
+                continue
+        else:
+            word_check = word_complete(word, guesses)
+
+            if word_check == "complete":
+                print("Correct")
+                guesses_remaining = 0
                 continue
 
         print_word(word, guesses)
         print(f"Lives left {guesses_remaining}\n")
-
-    print("Game Over!")
 
 
 game_intro()
