@@ -160,8 +160,11 @@ def run_game():
 
     # starting lives for game
     guesses_remaining = 9
+    hangman = TextFormatting(f"hangman{guesses_remaining}")
+
     print(word)
 
+    print(hangman.color_ascii())
     print_word(word, guesses)
 
     # request user letter guesses
