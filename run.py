@@ -123,6 +123,26 @@ def print_word(word, guesses):
     print("\n"+display+"\n")
 
 
+def word_complete(word, guesses):
+    """ create comparable string to word """
+
+    compare = []
+
+    for letter in word:
+        if letter in guesses:
+            compare.append(letter)
+        else:
+            compare.append("_")
+
+    # compare result to word to see if correct/finished
+    result_compare = "".join(compare)
+
+    if result_compare == word:
+        return "complete"
+
+    return "incomplete"
+
+
 def run_game():
     """ Runs though game """
 
