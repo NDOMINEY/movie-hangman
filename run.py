@@ -160,15 +160,16 @@ def run_game():
 
     # starting lives for game
     guesses_remaining = 9
-    hangman = TextFormatting(f"hangman{guesses_remaining}")
 
     print(word)
 
-    print(hangman.color_ascii())
-    print_word(word, guesses)
-
     # request user letter guesses
     while guesses_remaining > 0:
+        hangman = TextFormatting(f"hangman{guesses_remaining}")
+
+        print(hangman.color_ascii())
+        print_word(word, guesses)
+
         guess = input("Guess a letter: ").lower()
 
         guesses.append(guess)
@@ -177,7 +178,7 @@ def run_game():
             guesses_remaining = guesses_remaining - 1
 
             if guesses_remaining == 0:
-                print("Game Over!")
+                print(hangman.color_ascii())
                 continue
         else:
             word_check = word_complete(word, guesses)
@@ -188,7 +189,8 @@ def run_game():
                 continue
 
         print_word(word, guesses)
-        print(f"Lives left {guesses_remaining}\n")
+        print(hangman.color_ascii())
+        clr_scr()
 
 
 game_intro()
