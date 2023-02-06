@@ -176,10 +176,6 @@ def run_game():
         if len(incorrect_guesses) == 0:
             print("Incorrect guesses: None")
         else:
-            incorrect_letter = []
-            for letter in incorrect_guesses:
-                incorrect_letter.append(letter + " ")
-            
             incorrect_display = " ".join(incorrect_guesses)
             print(f"Incorrect guesses: {incorrect_display}")
 
@@ -192,6 +188,8 @@ def run_game():
                     print("Looks like you entered more than one guess!")
                 elif guess not in string.ascii_lowercase:
                     print("Ooops! Please enter a valid letter...")
+                elif guess in incorrect_guesses:
+                    print("You have already guessed that one... try again!")
                 else:
                     guesses.append(guess)
                     break
