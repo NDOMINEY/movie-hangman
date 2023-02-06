@@ -165,11 +165,10 @@ def run_game():
     # starting lives for game
     guesses_remaining = 9
 
-    print(word)
-
     # request user letter guesses
     while guesses_remaining > 0:
         clr_scr()
+        print(word)
 
         hangman = TextFormatting(f"hangman{guesses_remaining}")
 
@@ -191,6 +190,8 @@ def run_game():
                 elif guess not in string.ascii_lowercase:
                     print("Ooops! Please enter a valid letter...")
                 elif guess in incorrect_guesses:
+                    print("You have already guessed that one... try again!")
+                elif guess in guesses:
                     print("You have already guessed that one... try again!")
                 else:
                     guesses.append(guess)
