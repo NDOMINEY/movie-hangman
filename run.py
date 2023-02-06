@@ -169,6 +169,8 @@ def run_game():
 
     # request user letter guesses
     while guesses_remaining > 0:
+        clr_scr()
+
         hangman = TextFormatting(f"hangman{guesses_remaining}")
 
         print(hangman.color_ascii())
@@ -203,7 +205,9 @@ def run_game():
             if guesses_remaining == 0:
                 clr_scr()
                 print(game_over.color_ascii())
-                continue
+                time.sleep(0.5)
+                end_choice()
+
         else:
             word_check = word_complete(word, guesses)
 
@@ -219,9 +223,35 @@ def run_game():
                 print("")
                 print(word + "\n")
                 guesses_remaining = 0
-                continue
+                time.sleep(0.5)
 
-        clr_scr()
+                end_choice()
+
+
+def end_choice():
+    """ Provides user option to end or play again """
+
+    prompt = "Would you like to play again "
+    user_choice = TextFormatting(prompt)
+    choice = ["Y", "N", "YES", "NO"]
+    proceed = ["Y", "YES"]
+
+    try:
+        user_choice.type_delay()
+        endgame_choice = input("Y/N  =>  ").upper().strip()
+
+        if endgame_choice in choice:
+            if endgame_choice in proceed:
+                clr_scr()
+                print(title.color_ascii())
+                print(selection.color_ascii())
+                run_game()
+            else:
+                clr_scr()
+                print(title.color_ascii())
+                print("\nThanks for playing!")
+    except ValueError():
+        print("Sorry, please can you enter 'Y' or 'N'")
 
 
 game_intro()
