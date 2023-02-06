@@ -66,7 +66,7 @@ Lets play Hangman!
 The rules are simple, the object of the game is to guess the
 title of the movie.
 
-You can guess one letter at a time and if correct you will see it appear!
+You can guess one letter at a time, if correct you will see it appear!
 If you make an incorrect guess then you lose one of your 9 lives.
 
 Please see below movie genres to choose from...
@@ -90,7 +90,7 @@ def select_mode():
 
     prompt_str = "Please enter the genre of movie you would like to play"
     input_prompt = TextFormatting(prompt_str)
-    choices = ("disney", "horror", "comedy", "sci-fi")
+    choices = ("disney", "horror", "comedy", "scifi")
 
     while True:
 
@@ -104,7 +104,7 @@ def select_mode():
         if user_choice not in choices:
             print("""
 Ooops! That doesn't match an option!
-Choices are either Disney, Comedy, Sci-Fi, or Horror...
+Choices are either Disney, Comedy, SciFi, or Horror...
 """)
         else:
             print("\nGreat Choice! Let's Go!")
