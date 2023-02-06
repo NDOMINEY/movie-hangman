@@ -160,6 +160,7 @@ def run_game():
 
     # create empty list to hold guesses, includes space
     guesses = [" "]
+    incorrect_guesses = []
 
     # starting lives for game
     guesses_remaining = 9
@@ -171,6 +172,17 @@ def run_game():
         hangman = TextFormatting(f"hangman{guesses_remaining}")
 
         print(hangman.color_ascii())
+
+        if len(incorrect_guesses) == 0:
+            print("Incorrect guesses: None")
+        else:
+            incorrect_letter = []
+            for letter in incorrect_guesses:
+                incorrect_letter.append(letter + " ")
+            
+            incorrect_display = " ".join(incorrect_guesses)
+            print(f"Incorrect guesses: {incorrect_display}")
+
         print_word(word, guesses)
 
         while True:
@@ -188,6 +200,7 @@ def run_game():
 
         if guess not in word:
             guesses_remaining = guesses_remaining - 1
+            incorrect_guesses.append(guess)
 
             if guesses_remaining == 0:
                 clr_scr()
@@ -210,8 +223,6 @@ def run_game():
                 guesses_remaining = 0
                 continue
 
-        print_word(word, guesses)
-        print(hangman.color_ascii())
         clr_scr()
 
 
