@@ -222,7 +222,7 @@ def run_game():
                 show_movie.type_delay()
                 time.sleep(0.5)
                 print("")
-                print(word + "\n")
+                print("\n" + word.upper() + "\n")
                 guesses_remaining = 0
                 time.sleep(0.5)
 
