@@ -3,6 +3,7 @@ import os
 import time
 import platform
 import random
+import string
 
 
 os.system("")
@@ -172,9 +173,18 @@ def run_game():
         print(hangman.color_ascii())
         print_word(word, guesses)
 
-        guess = input("Guess a letter: ").lower()
-
-        guesses.append(guess)
+        while True:
+            try:
+                guess = input("Guess a letter: ").lower().strip()
+                if len(guess) != 1:
+                    print("Looks like you entered more than one guess!")
+                elif guess not in string.ascii_lowercase:
+                    print("Ooops! Please enter a valid letter...")
+                else:
+                    guesses.append(guess)
+                    break
+            except ValueError():
+                print("Please enter a letter for your next guess")
 
         if guess not in word:
             guesses_remaining = guesses_remaining - 1
