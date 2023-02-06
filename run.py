@@ -236,23 +236,28 @@ def end_choice():
     user_choice = TextFormatting(prompt)
     choice = ["Y", "N", "YES", "NO"]
     proceed = ["Y", "YES"]
+    game_ended = False
 
-    try:
-        user_choice.type_delay()
-        endgame_choice = input("Y/N  =>  ").upper().strip()
+    while game_ended is False:
+        try:
+            user_choice.type_delay()
+            endgame_choice = input("Y/N  =>  ").upper().strip()
 
-        if endgame_choice in choice:
-            if endgame_choice in proceed:
-                clr_scr()
-                print(title.color_ascii())
-                print(selection.color_ascii())
-                run_game()
+            if endgame_choice in choice:
+                if endgame_choice in proceed:
+                    clr_scr()
+                    print(title.color_ascii())
+                    print(selection.color_ascii())
+                    run_game()
+                else:
+                    clr_scr()
+                    print(title.color_ascii())
+                    print("\nThanks for playing!")
+                    game_ended = True
             else:
-                clr_scr()
-                print(title.color_ascii())
-                print("\nThanks for playing!")
-    except ValueError():
-        print("Sorry, please can you enter 'Y' or 'N'")
+                print("Sorry, please can you enter 'Y' or 'N'")
+        except ValueError():
+            print("Sorry, please can you enter 'Y' or 'N'")
 
 
 game_intro()
