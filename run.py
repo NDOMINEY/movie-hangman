@@ -260,5 +260,10 @@ def end_choice():
             print("Sorry, please can you enter 'Y' or 'N'")
 
 
-game_intro()
-run_game()
+def main():
+    """ Run game """
+    game_intro()
+    run_game()
+
+
+main()
