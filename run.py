@@ -289,7 +289,12 @@ def game_timer(start_time, end_time):
 def score(secs):
     """ Obtains user name against time score and records it to gspread """
 
-    print("To see if you made the top 10 quickest games please enter your name\n")
+    score_str = """
+To see if you are in the top 10 quickest games, enter your name below
+
+"""
+    score_text = TextFormatting(score_str)
+    score_text.type_delay()
     user = input("Name => ")
 
     timer = int(secs)
@@ -297,12 +302,13 @@ def score(secs):
 
     scores_data.append_row(data)
 
-    loading_str = "Loading highscores......"
+    loading_str = "Loading highscores......\n"
     loading_text = TextFormatting(loading_str)
-    print(loading_text.type_delay())
+    loading_text.type_delay()
     time.sleep(0.5)
 
     high_scores = scores.get_all_values()
+    print("\n HIGHSCORES")
     print(tabulate(high_scores, headers='firstrow', tablefmt="fancy_grid"))
 
     end_choice()
@@ -311,7 +317,7 @@ def score(secs):
 def end_choice():
     """ Provides user option to end or play again """
 
-    prompt = "Would you like to play again "
+    prompt = "\nWould you like to play again "
     user_choice = TextFormatting(prompt)
     choice = ["Y", "N", "YES", "NO"]
     proceed = ["Y", "YES"]
