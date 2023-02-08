@@ -148,6 +148,9 @@ def word_complete(word, guesses):
 
 def user_guesses(g_remaining, word, incorrect_g, guesses):
     """ Runs user guesses """
+
+    start_time = time.time()
+
     while g_remaining > 0:
         error = ""
         input_error(word, error, g_remaining, incorrect_g, guesses)
@@ -186,28 +189,29 @@ Please try again!"""
 
             if g_remaining == 0:
                 clr_scr()
+                end_time = time.time()
                 print(game_over.color_ascii())
                 time.sleep(0.5)
                 end_choice()
-
         else:
             word_check = word_complete(word, guesses)
 
             if word_check == "complete":
                 clr_scr()
+                print(title.color_ascii())
                 print(winner.color_ascii())
+                end_time = time.time()
 
                 # slow type text
                 slow_text = "You correctly guessed the movie..."
                 show_movie = TextFormatting(slow_text)
                 show_movie.type_delay()
                 time.sleep(0.5)
-                print("")
-                print("\n" + word.upper() + "\n")
+                print(word.upper() + "\n")
                 g_remaining = 0
                 time.sleep(0.5)
 
-                end_choice()
+                game_timer(start_time, end_time)
 
 
 def input_error(word, error, g_remaining, incorrect_g, guesses):
@@ -250,6 +254,19 @@ def run_game():
     g_remaining = 9
 
     user_guesses(g_remaining, word, incorrect_g, guesses)
+
+
+def game_timer(start_time, end_time):
+    """ Calcualted how long it took to complete game """
+
+    secs = end_time - start_time
+
+    if secs < 60:
+        display = time.strftime("%S seconds", time.gmtime(secs))
+    else:
+        display = time.strftime("%M mins and %S seconds", time.gmtime(secs))
+
+    print(f"You completed this in {display}!")
 
 
 def end_choice():
