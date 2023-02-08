@@ -155,16 +155,24 @@ def user_guesses(g_remaining, word, incorrect_g, guesses):
             try:
                 guess = input("Guess a letter: ").lower().strip()
                 if len(guess) != 1:
-                    error = "Looks like you entered more than one guess!"
+                    error = f"""
+You entered '{guess}'
+Please only enter one guess at a time!"""
                     input_error(word, error, g_remaining, incorrect_g, guesses)
                 elif guess not in string.ascii_lowercase:
-                    error = "Ooops! Please enter a valid letter..."
+                    error = f"""
+Ooops! You entered '{guess}'
+Please enter a valid letter..."""
                     input_error(word, error, g_remaining, incorrect_g, guesses)
                 elif guess in incorrect_g:
-                    error = "You have already guessed that one... try again!"
+                    error = f"""
+You have already guessed '{guess}'
+Please try again!"""
                     input_error(word, error, g_remaining, incorrect_g, guesses)
                 elif guess in guesses:
-                    error = "You have already guessed that one... try again!"
+                    error = f"""
+You have already guessed '{guess}'
+Please try again!"""
                     input_error(word, error, g_remaining, incorrect_g, guesses)
                 else:
                     guesses.append(guess)
