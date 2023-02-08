@@ -146,53 +146,26 @@ def word_complete(word, guesses):
     return "incomplete"
 
 
-def run_game():
-    """ Runs though game """
-
-    user_choice = select_mode()
-    # selects correct file for user choice
-    word_file = f"./assets/word_selections/{user_choice}_movies.txt"
-    movie_mode = open(word_file, "r", encoding="utf-8")
-    word_list = movie_mode.readlines()
-
-    # select random word for game play
-    word = random.choice(word_list).lower()[:-1]
-
-    # create empty list to hold guesses, includes space
-    guesses = [" "]
-    incorrect_guesses = []
-
-    # starting lives for game
-    guesses_remaining = 9
-
-    # request user letter guesses
-    while guesses_remaining > 0:
-        clr_scr()
-        print(word)
-
-        hangman = TextFormatting(f"hangman{guesses_remaining}")
-
-        print(hangman.color_ascii())
-
-        if len(incorrect_guesses) == 0:
-            print("Incorrect guesses: None")
-        else:
-            incorrect_display = " ".join(incorrect_guesses)
-            print(f"Incorrect guesses: {incorrect_display}")
-
-        print_word(word, guesses)
-
+def user_guesses(g_remaining, word, incorrect_g, guesses):
+    """ Runs user guesses """
+    while g_remaining > 0:
+        error = ""
+        input_error(word, error, g_remaining, incorrect_g, guesses)
         while True:
             try:
                 guess = input("Guess a letter: ").lower().strip()
                 if len(guess) != 1:
-                    print("Looks like you entered more than one guess!")
+                    error = "Looks like you entered more than one guess!"
+                    input_error(word, error, g_remaining, incorrect_g, guesses)
                 elif guess not in string.ascii_lowercase:
-                    print("Ooops! Please enter a valid letter...")
-                elif guess in incorrect_guesses:
-                    print("You have already guessed that one... try again!")
+                    error = "Ooops! Please enter a valid letter..."
+                    input_error(word, error, g_remaining, incorrect_g, guesses)
+                elif guess in incorrect_g:
+                    error = "You have already guessed that one... try again!"
+                    input_error(word, error, g_remaining, incorrect_g, guesses)
                 elif guess in guesses:
-                    print("You have already guessed that one... try again!")
+                    error = "You have already guessed that one... try again!"
+                    input_error(word, error, g_remaining, incorrect_g, guesses)
                 else:
                     guesses.append(guess)
                     break
@@ -200,10 +173,10 @@ def run_game():
                 print("Please enter a letter for your next guess")
 
         if guess not in word:
-            guesses_remaining = guesses_remaining - 1
-            incorrect_guesses.append(guess)
+            g_remaining = g_remaining - 1
+            incorrect_g.append(guess)
 
-            if guesses_remaining == 0:
+            if g_remaining == 0:
                 clr_scr()
                 print(game_over.color_ascii())
                 time.sleep(0.5)
@@ -223,10 +196,52 @@ def run_game():
                 time.sleep(0.5)
                 print("")
                 print("\n" + word.upper() + "\n")
-                guesses_remaining = 0
+                g_remaining = 0
                 time.sleep(0.5)
 
                 end_choice()
+
+
+def input_error(word, error, g_remaining, incorrect_g, guesses):
+    """ hangman game guess display """
+
+    clr_scr()
+    print(word)
+
+    hangman = TextFormatting(f"hangman{g_remaining}")
+
+    print(hangman.color_ascii())
+
+    if len(incorrect_g) == 0:
+        print("Incorrect guesses: None")
+    else:
+        incorrect_display = " ".join(incorrect_g)
+        print(f"Incorrect guesses: {incorrect_display}")
+
+    print_word(word, guesses)
+    print(error + "\n")
+
+
+def run_game():
+    """ Runs though game """
+
+    user_choice = select_mode()
+    # selects correct file for user choice
+    word_file = f"./assets/word_selections/{user_choice}_movies.txt"
+    movie_mode = open(word_file, "r", encoding="utf-8")
+    word_list = movie_mode.readlines()
+
+    # select random word for game play
+    word = random.choice(word_list).lower()[:-1]
+
+    # create empty list to hold guesses, includes space
+    guesses = [" "]
+    incorrect_g = []
+
+    # starting lives for game
+    g_remaining = 9
+
+    user_guesses(g_remaining, word, incorrect_g, guesses)
 
 
 def end_choice():
