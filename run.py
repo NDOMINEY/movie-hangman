@@ -1,3 +1,4 @@
+""" import requirements to run game """
 import os
 import time
 import platform
