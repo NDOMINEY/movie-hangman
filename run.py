@@ -3,6 +3,7 @@ import time
 import platform
 import random
 import string
+from tabulate import tabulate
 import gspread
 from google.oauth2.service_account import Credentials
 
@@ -280,22 +281,31 @@ def game_timer(start_time, end_time):
     else:
         display = time.strftime("%M mins and %S seconds", time.gmtime(secs))
 
-    print(f"You completed this in {display}!")
+    print(f"You completed this in {display}!\n")
 
-    score()
+    score(secs)
 
 
-def score():
+def score(secs):
     """ Obtains user name against time score and records it to gspread """
 
-    print("To see if you made the top 10 quickest games please enter your name")
-    user = input("Name: ")
+    print("To see if you made the top 10 quickest games please enter your name\n")
+    user = input("Name => ")
 
-    timer = int(300)
+    timer = int(secs)
     data = [user, timer]
 
     scores_data.append_row(data)
-    print("UPDATED")
+
+    loading_str = "Loading highscores......"
+    loading_text = TextFormatting(loading_str)
+    print(loading_text.type_delay())
+    time.sleep(0.5)
+
+    high_scores = scores.get_all_values()
+    print(tabulate(high_scores, headers='firstrow', tablefmt="fancy_grid"))
+
+    end_choice()
 
 
 def end_choice():
