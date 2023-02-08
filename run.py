@@ -85,6 +85,9 @@ title of the movie.
 You can guess one letter at a time, if correct you will see it appear!
 If you make an incorrect guess then you lose one of your 9 lives.
 
+Your game will be timed! If you complete your movie, see if you can make
+the top 10 quickest games!
+
 Please see below movie genres to choose from...
 
 """)
