@@ -3,6 +3,7 @@ import time
 import platform
 import random
 import string
+import getpass
 from tabulate import tabulate
 import gspread
 from google.oauth2.service_account import Credentials
@@ -213,7 +214,6 @@ Please try again!"""
 
             if word_check == "complete":
                 clr_scr()
-                print(title.color_ascii())
                 print(winner.color_ascii())
                 end_time = time.time()
 
@@ -317,32 +317,12 @@ To see if you are in the top 10 quickest games, enter your name below
 def end_choice():
     """ Provides user option to end or play again """
 
-    prompt = "\nWould you like to play again "
-    user_choice = TextFormatting(prompt)
-    choice = ["Y", "N", "YES", "NO"]
-    proceed = ["Y", "YES"]
-    game_ended = False
+    prompt = '\nPlease press enter to play again!'
+    getpass.getpass(prompt=prompt)
 
-    while game_ended is False:
-        try:
-            user_choice.type_delay()
-            endgame_choice = input("Y/N  =>  ").upper().strip()
-
-            if endgame_choice in choice:
-                if endgame_choice in proceed:
-                    clr_scr()
-                    print(title.color_ascii())
-                    print(selection.color_ascii())
-                    run_game()
-                else:
-                    clr_scr()
-                    print(title.color_ascii())
-                    print("\nThanks for playing!")
-                    game_ended = True
-            else:
-                print("Sorry, please can you enter 'Y' or 'N'")
-        except ValueError():
-            print("Sorry, please can you enter 'Y' or 'N'")
+    print(title.color_ascii())
+    print(selection.color_ascii())
+    run_game()
 
 
 def main():
