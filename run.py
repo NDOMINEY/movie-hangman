@@ -13,7 +13,7 @@ SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
     "https://www.googleapis.com/auth/drive.file",
     "https://www.googleapis.com/auth/drive"
-    ]
+]
 
 CREDS = Credentials.from_service_account_file('creds.json')
 SCOPED_CREDS = CREDS.with_scopes(SCOPE)
@@ -51,9 +51,9 @@ class TextFormatting:
             "yellow": "\u001b[33;1m",
             "blue": "\u001b[34;1m",
             "white": "\u001b[37m",
-            "red":  "\u001b[31m",
+            "red": "\u001b[31m",
             "cyan": "\u001b[36m"
-            }
+        }
 
         file = f"./assets/ascii_docs/{self.text}.txt"
         content = open(file, "r", encoding="utf-8")
@@ -143,7 +143,7 @@ def print_word(word, guesses):
             result.append("_ ")
 
     display = "".join(result)
-    print("\n"+display+"\n")
+    print("\n" + display + "\n")
 
 
 def word_complete(word, guesses):
