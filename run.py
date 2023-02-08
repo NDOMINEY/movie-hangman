@@ -211,6 +211,7 @@ Please try again!"""
                 clr_scr()
                 end_time = time.time()
                 print(game_over.color_ascii())
+                print(f"Oh no! The movie was... {word.upper()}")
                 time.sleep(0.5)
                 end_choice()
         else:
