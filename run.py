@@ -18,6 +18,7 @@ GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('hangman_highscores')
 
 scores = SHEET.worksheet('highscore_summary')
+scores_data = SHEET.worksheet('score_records')
 
 os.system("")
 
@@ -280,6 +281,21 @@ def game_timer(start_time, end_time):
         display = time.strftime("%M mins and %S seconds", time.gmtime(secs))
 
     print(f"You completed this in {display}!")
+
+    score()
+
+
+def score():
+    """ Obtains user name against time score and records it to gspread """
+
+    print("To see if you made the top 10 quickest games please enter your name")
+    user = input("Name: ")
+
+    timer = int(300)
+    data = [user, timer]
+
+    scores_data.append_row(data)
+    print("UPDATED")
 
 
 def end_choice():
