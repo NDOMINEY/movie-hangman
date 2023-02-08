@@ -237,7 +237,6 @@ def input_error(word, error, g_remaining, incorrect_g, guesses):
     """ hangman game guess display """
 
     clr_scr()
-    print(word)
 
     hangman = TextFormatting(f"hangman{g_remaining}")
 
