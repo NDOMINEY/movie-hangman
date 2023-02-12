@@ -86,14 +86,6 @@ To generate the Ascii art for the words, the below generator was used with the f
 
 ### Development Process
 
-#### Random Letter Generator
-
-#### Time Challenge - Count Down
-
-#### Reading Exisiting High Score
-
-#### Storing Seperate High Scores
-
 ### Usability Testing
 
 ### User Requirement Testing
