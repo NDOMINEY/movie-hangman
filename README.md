@@ -131,6 +131,13 @@ The user is then given the option to play again.
 
 ### Future Features
 
+The addition of difficulty levels
+
+- Easy - with no restriction of lives
+- Medium - standard amount of lives
+- Hard - reduced lives
+- Extreme - reduced lives and time to complete
+
 ## Testing
 
 ### Development Process
