@@ -34,6 +34,18 @@ Project Repository - [Movie Hangman - Repository](https://github.com/NDOMINEY/mo
 
 ## Requirements
 
+Please see below a table showing the desired requirements for Movie Hangman game, with a matrix for importance of feature and feasibility of implementation.
+
+|  <br>Requirement                                                                               |  <br>Importance  |  <br>Viability/Feasibility  |
+|------------------------------------------------------------------------------------------------|------------------|-----------------------------|
+|  <br>Display the game in a retro arcade fashion with the use of fonts and colours in terminal  |  <br>5           |  <br>5                      |
+|  <br>Provide the user with random selection of a movie title to play hangman                   |  <br>5           |  <br>5                      |
+|  <br>Provide the user with a choice of movie genres to select the movie title from             |  <br>5           |  <br>5                      |
+|  <br>Enable the user to play multiple games without restarting the program each time           |  <br>5           |  <br>5                      |
+|  <br>Create a measurement of how well the puzzle was solved                                    |  <br>4           |  <br>4                      |
+|  <br>Use the measurement to create and store a record of a score with user input of name       |  <br>3           |  <br>3                      |
+|  <br>Display top high scores to user                                                           |  <br>3           |  <br>3                      |
+
 ## Design
 
 ### Wireframes:
