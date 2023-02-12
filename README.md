@@ -117,6 +117,18 @@ When the user corrects the whole movie title correctly, the below is displayed t
 
 ![Winner](documentation/winner.png)
 
+#### Timed Score
+
+To measure a score against how well the user did, the game play is timed and if the user wins this is displayed to them. The user is then asked to submit their name to record against their time.
+
+![Winner time](documentation/time-feedback.png)
+
+After this, a top 10 scores are displayed to the user to see if they made the top list.
+
+![High Scores](documentation/highscore.png)
+
+The user is then given the option to play again.
+
 ### Future Features
 
 ## Testing
