@@ -12,6 +12,7 @@ Project Repository - [Movie Hangman - Repository](https://github.com/NDOMINEY/mo
 ## Table of Contents
 + [Requirements](#requirements "Requirements")
 + [Design](#design "Design")
+  + [Flow Diagram](#flow-diagram "Flow Diagram")
   + [Wireframes](#wireframes "Wireframes")
   + [Colour Scheme](#colour-scheme "Colour Scheme")
   + [Typography](#typography "Typography")
