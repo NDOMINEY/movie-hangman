@@ -16,7 +16,6 @@ Project Repository - [Movie Hangman - Repository](https://github.com/NDOMINEY/mo
   + [Wireframes](#wireframes "Wireframes")
   + [Colour Scheme](#colour-scheme "Colour Scheme")
   + [Typography](#typography "Typography")
-  + [Imagery](#imagery "Imagery")
 + [Features](#features "Features")
   + [Existing Features](#existing-features "Existing Features")
 + [Testing](#testing "Testing")
@@ -62,9 +61,20 @@ Please see below link to wireframes for the game layout.
 
 ### Colour Scheme:
 
+To keep with the retro arcade theme, the majority of the colors chosen for text is bold primary colours with a couple of secondary colours for variety.
+
+![Text Colours](documentation/text-colours.png)
+
 ### Typography:
 
-### Imagery:
+To create a retro feel to the game, the title and main information communicated to the user was done using Ascii art for the words and the hangman illustration. 
+
+To generate the Ascii art for the words, the below generator was used with the following font options.
+
+[Ascii Generator](https://ascii-generator.site/t/)
+
+- Title font used was 'dancingfont'
+- All other Ascii font 'small'
 
 ## Features
 
