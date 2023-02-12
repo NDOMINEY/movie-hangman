@@ -105,6 +105,12 @@ Please see link below to all stages of the hangman illustrations.
 
 [Hangman Illustrations](documentation/ascii-hangman.pdf)
 
+#### Game Over
+
+When the user runs out of lives, a final hangman illustration is shown to inform the user the game is over. The user is then informed on what the title of the movie was and given the option to play again.
+
+![Game Over](documentation/gameover.png)
+
 ### Future Features
 
 ## Testing
