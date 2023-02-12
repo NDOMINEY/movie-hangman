@@ -111,6 +111,12 @@ When the user runs out of lives, a final hangman illustration is shown to inform
 
 ![Game Over](documentation/gameover.png)
 
+#### Movie Title Guessed
+
+When the user corrects the whole movie title correctly, the below is displayed to the user to let them know they guessed it correctly.
+
+![Winner](documentation/winner.png)
+
 ### Future Features
 
 ## Testing
