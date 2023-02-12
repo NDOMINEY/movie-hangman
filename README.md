@@ -80,7 +80,13 @@ To generate the Ascii art for the words, the below generator was used with the f
 
 ### Existing Features
 
-### Future Features:
+#### Introduction
+
+When the program first runs, a large game title is displayed to convery to the user the purpose of the program is a Hangman game. The title is then followed by the rules of the game to the user.
+
+![Game Introduction](documentation/introduction.png)
+
+### Future Features
 
 ## Testing
 
