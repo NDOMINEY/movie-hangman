@@ -55,6 +55,10 @@ To structure the game and aid in creating the functions required to run the game
 
 ### Wireframes:
 
+Please see below link to wireframes for the game layout.
+
+[Wireframes](documentation/wireframes.pdf)
+
 ### Colour Scheme:
 
 ### Typography:
