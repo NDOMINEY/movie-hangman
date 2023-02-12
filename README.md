@@ -48,6 +48,11 @@ Please see below a table showing the desired requirements for Movie Hangman game
 
 ## Design
 
+### Flow Diagram:
+To structure the game and aid in creating the functions required to run the game a basic flow diagram was created which is linked below.
+
+[Flow Diagram](documentation/game-flowchart.pdf)
+
 ### Wireframes:
 
 ### Colour Scheme:
