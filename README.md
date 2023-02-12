@@ -86,6 +86,25 @@ When the program first runs, a large game title is displayed to convery to the u
 
 ![Game Introduction](documentation/introduction.png)
 
+#### Movie Genre Selection
+
+To enable to the user to narrow down the movie title to a genre of their choice, they are presented with four options which they are able to select from. <br>
+The four options are Disney, Comedy, SciFi, and Horror.
+
+![Movie Selection](documentation/movie-selection.png)
+
+#### Game Play
+
+When the game is in progress, at the top a hangman illustration is displayed with the total amount of lives left. Incorrect guesses are displayed below so that the user is aware.
+
+Below this, the movie title they are guessing is displayed with '_' for letters yet to be guessed. This is then followed by a user input request for their next guess.
+
+![Game Play](documentation/game-play.png)
+
+Please see link below to all stages of the hangman illustrations.
+
+[Hangman Illustrations](documentation/ascii-hangman.pdf)
+
 ### Future Features
 
 ## Testing
