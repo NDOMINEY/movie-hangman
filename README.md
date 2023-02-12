@@ -1,7 +1,13 @@
 # Movie Hangman
 
-Intro
+Movie Hangman, is an interactive terminal game which allows the user to play hangman in a retro arcade game style. Four different modes are available which include - Disney, Comedy, SciFi, and Horror. Each one generates a random movie from a list of movies from that genre. This is to open the game up to a wider selection of movie fans. 
 
+The targetted audience is all who have a love of word games and movies.
+
+![Game Title](documentation/hangman-title.png)
+
+To access the game please follow this link [Movie Hangman!](https://movie-hangman.herokuapp.com/) <br>
+Project Repository - [Movie Hangman - Repository](https://github.com/NDOMINEY/movie-hangman)
 
 ## Table of Contents
 + [Requirements](#requirements "Requirements")
