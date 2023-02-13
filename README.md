@@ -247,16 +247,25 @@ Through exploritory testing it was undiscovered that when the introduction is ru
 - Python
 
 ## Deployment
-This site is deployed through GitHub Pages. The following steps where followed -
-- Within the repository, go to settings
-- Under settings select pages section
-- Select source 'Deploy from a branch'
-- Underneath source, select main branch and root folder and save to deploy
 
 #### Future development
+
+To carry out further development on the project you can clone the repository locally. This is completed by carrying out the following steps -
+
+Within your repository, make sure you are on the 'Code' tab
+Click on the button that shows '<> Code'
+Then select how you wish to clone
+To create an isolated version of the project, you may add a branch off of main. To do this follow the below steps -
+
+Whilst in the code section, click on 'branch'
+You will then see a breakdown of the exisiting branches
+To add a new branch, click 'New Branch' which is a green button
+Then name your branch and select the branch source
 
 ## Credits
 
 ### Content
+
+
 
 ### Media
