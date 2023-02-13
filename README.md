@@ -239,6 +239,8 @@ Please expand 'Functional Test Cases' below to see a breakdown of the tests carr
 
 ### Unfixed Bugs
 
+Through exploritory testing it was undiscovered that when the introduction is running, if the user clicks enter it movies the text display down onto a new line. Also, the enter command is then stored and is taken as an incorrect guess of a movie selection when the game introduction finishes and the movie selection runs.
+
 ## Technologies Used
 
 ### Main Languages Used
