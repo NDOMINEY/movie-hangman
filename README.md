@@ -264,8 +264,31 @@ Then name your branch and select the branch source
 
 ## Credits
 
-### Content
+### Google Sheets API
+
+Code and set up followed from Code Institute, Love Sandwiches project walk through.
+
+### Movie Title Lists
+
+- Horror Films from [Wikipedia - List of highest-grossing horror films](https://en.wikipedia.org/wiki/List_of_highest-grossing_horror_films)
+- Disney, Sci-Fi, and Comedy [IMBD Movie Charts](https://www.imdb.com/?ref_=nv_home)
+
+### Type Delay to Terminal
+
+Inspiration for code taken from the following forum [Stack Overflow - Typing effect in Python](https://stackoverflow.com/questions/20302331/typing-effect-in-python)
+
+### Tabulate to Display Table
+
+Inspiration for code taken from the following forum [Stack Overflow - Printing Lists as Tabular Data](https://stackoverflow.com/questions/9535954/printing-lists-as-tabular-data)
 
 
+### Terminal Clear
 
-### Media
+Following tutorial used to create clear function for terminal - [STechies - Python Clear Screen](https://www.stechies.com/python-clear-screen/)
+
+### Ascii Text
+
+The following generator was used for the Ascii text in the game [ascii-generator](https://ascii-generator.site/t/) <br>
+The following blog was used as inspiration for the code to colour text in the terminal [Haoyi's Programming Blog - Build your own Command Line with ANSI escape codes](https://www.lihaoyi.com/post/BuildyourownCommandLinewithANSIescapecodes.html)
+The following youtube tutorial was used as inspiration for the code to colour text in the terminal [Learn Learn Scratch Tutorials - Python Console Colors - Easy Tutorial](https://www.youtube.com/watch?v=u4QmAIoo4i0)
+
