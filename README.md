@@ -162,7 +162,29 @@ After further research, a library was found which had a module called getpass wh
 
 ### Usability Testing
 
+- The feature of the appeared typing on the terminal is time to be quick to still maintain effect but to not hold up the user game play.
+
+- The colours chosen are contrasting to enable accessibility.
+
+- User input is validated to ensure the game can process the user data, an appropriate message is then displayed to the user depending on the error occured to help the user understand the error and to not repeat again.
+
+- All game decision points, redirects users to the correct stage.
+
 ### User Requirement Testing
+
+To ensure the game meets the expectations of the user, please see below table of user cases which summarises whether they pass and also which test case they relate to.
+
+|  <br>User Case  |  <br>Description                                                                                                    |  <br>Relevant test cases                                             |  <br>Result  |  <br>Comments  |
+|-----------------|---------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------|--------------|----------------|
+|  <br>UC-001     |  <br>As a user I to understand how to play the game.                                                                |  <br>TC-001, TC-003                                                  |  <br>Pass    |  <br>          |
+|  <br>UC-002     |  <br>As a user I want to be able to choose the genre of movie that my movie title to guess is selected from         |  <br>TC-004, TC-005, TC-006, TC-007, TC-008, TC-009, TC-010, TC-011  |  <br>Pass    |  <br>          |
+|  <br>UC-003     |  <br>As a user I want to be able to see how many lives I have left                                                  |  <br>TC-012                                                          |  <br>Pass    |  <br>          |
+|  <br>UC-004     |  <br>As a user I want to be able to see the incorrect guesses I have already made                                   |  <br>TC-013                                                          |  <br>Pass    |  <br>          |
+|  <br>UC-005     |  <br>As a user I want the movie title I am guessing to update with my correct guesses                               |  <br>TC-014, TC-015                                                  |  <br>Pass    |  <br>          |
+|  <br>UC-006     |  <br>As a user I want to know what the movie title is if I fail to complete it within the allocated amount of live  |  <br>TC-021                                                          |  <br>Pass    |  <br>          |
+|  <br>UC-007     |  <br>As a user I want to be able to measure my success to record a score                                            |  <br>TC-026, TC-027, TC-028, TC-029                                  |  <br>Pass    |  <br>          |
+|  <br>UC-008     |  <br>As a user I want to be able to see the top highscore                                                           |  <br>TC-030                                                          |  <br>Pass    |  <br>          |
+|  <br>UC-009     |  <br>As a user I want to be able to play again without restarted the program                                        |  <br>TC-022, TC-023, TC-024, TC-031, TC-032, TC-033                  |  <br>Pass    |  <br>          |
 
 ### Functional Testing
 
