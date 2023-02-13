@@ -18,6 +18,8 @@ Project Repository - [Movie Hangman - Repository](https://github.com/NDOMINEY/mo
   + [Typography](#typography "Typography")
 + [Features](#features "Features")
   + [Existing Features](#existing-features "Existing Features")
+  + [Future Features](#future-features "Future Features")
+
 + [Testing](#testing "Testing")
   + [Development Process](#development-process "Development Process")
   + [Usability Testing](#usability-testing "Usability Testing")
@@ -141,6 +143,22 @@ The addition of difficulty levels
 ## Testing
 
 ### Development Process
+
+Throughout the development process, each feature was tested on the terminal within gitpod to check that the code added was working as intended. This then resulted in realtime changes before commiting the new features. Below is a list of bugs that were discussed through development.
+
+#### Clear Terminal Command
+
+I found that initially my clear terminal command worked on a MAC operating system but then did not on windows. After further research I discovered that this was because the os.system() needed an alternative input if on a different operating system. To correct this, the system is identified first and then the appropriate function is used to clear screen.
+
+#### Typing Text Display
+
+When creating the function, type_delay(), there was an error where the delay was applied and then the whole string appears at once rather than applying the delay to each character. To resolve this, flush=True was added to the print function. This meant that the print to terminal took place after each iteration of the loop rather than waiting to the end and printing at once.
+
+#### End Choice - Enter to Play Again
+
+At the end of the game, the user is given the option to pay again by clicking 'enter'. To enable this,  initially the input() function was used to receive data from the user. Upon running the game, it was found that there was not a way to stop display of all other the keys the user could press prior to clicking 'enter'.
+
+After further research, a library was found which had a module called getpass which requested input from the user but did not display any visual typing. This was then used to replace the previous input() function.
 
 ### Usability Testing
 
