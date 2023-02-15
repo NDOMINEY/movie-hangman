@@ -237,6 +237,19 @@ Please expand 'Functional Test Cases' below to see a breakdown of the tests carr
 
 ### Validator Testing
 
+- HTML
+  - HTML Validator passed with no issues - [W3C Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fmovie-hangman.herokuapp.com%2F)
+
+- CSS
+  - CSS Validator passed with no issues - [Jigsaw validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fmovie-hangman.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+
+- Python
+  - The python code was validated using PEP8.
+    - This was done through first installing AutoPep8 <br> `pip3 install autopep8`
+    - Then AutoPep8 was run to check the code <br> `autopep8 --in-place --aggressive --aggressive -r *.py`
+    - This returned no corrections to be made.
+
+
 ### Unfixed Bugs
 
 Through exploritory testing it was uncovered that when the introduction is running, if the user clicks enter it moves the text display down onto a new line. Also, the enter command is then stored and is taken as an incorrect guess of a movie selection when the game introduction finishes and the movie selection runs.
@@ -245,6 +258,8 @@ Through exploritory testing it was uncovered that when the introduction is runni
 
 ### Main Languages Used
 - Python
+- HTML
+- CSS
 
 ## Deployment
 
