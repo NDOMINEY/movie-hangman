@@ -51,7 +51,7 @@ Please see below a table showing the desired requirements for Movie Hangman game
 ## Design
 
 ### Flow Diagram:
-To structure the game and aid in creating the functions required to run the game a basic flow diagram was created which is linked below.
+To structure and aid in creating the functions required to run the game, a basic flow diagram was created which is linked below.
 
 [Flow Diagram](documentation/game-flowchart.pdf)
 
@@ -84,7 +84,7 @@ To generate the Ascii art for the words, the below generator was used with the f
 
 #### Introduction
 
-When the program first runs, a large game title is displayed to convery to the user the purpose of the program is a Hangman game. The title is then followed by the rules of the game to the user.
+When the program first runs, a large game title is displayed to convey to the user the purpose of the program is a Hangman game. The title is then followed by the rules of the game to the user.
 
 ![Game Introduction](documentation/introduction.png)
 
@@ -115,7 +115,7 @@ When the user runs out of lives, a final hangman illustration is shown to inform
 
 #### Movie Title Guessed
 
-When the user corrects the whole movie title correctly, the below is displayed to the user to let them know they guessed it correctly.
+When the user corrects the whole movie title correctly, the below is displayed to let them know they guessed it correctly.
 
 ![Winner](documentation/winner.png)
 
@@ -125,7 +125,7 @@ To measure a score against how well the user did, the game play is timed and if 
 
 ![Winner time](documentation/time-feedback.png)
 
-After this, a top 10 scores are displayed to the user to see if they made the top list.
+After this, a top 10 scores is displayed to the user to see if they made the list.
 
 ![High Scores](documentation/highscore.png)
 
@@ -144,29 +144,29 @@ The addition of difficulty levels
 
 ### Development Process
 
-Throughout the development process, each feature was tested on the terminal within gitpod to check that the code added was working as intended. This then resulted in realtime changes before commiting the new features. Below is a list of bugs that were discussed through development.
+Throughout the development process, each feature was tested on the terminal within gitpod to check that the code added was working as intended. This then resulted in realtime changes before commiting the new features. Below is a list of bugs that were discovered through development.
 
 #### Clear Terminal Command
 
-I found that initially my clear terminal command worked on a MAC operating system but then did not on windows. After further research I discovered that this was because the os.system() needed an alternative input if on a different operating system. To correct this, the system is identified first and then the appropriate function is used to clear screen.
+I found that initially my clear terminal command worked on a MAC operating system but then did not on windows. After further research I discovered that this was because the `os.system()` needed an alternative input if on a different operating system. To correct this, the system is identified first and then the appropriate function is used to clear screen.
 
 #### Typing Text Display
 
-When creating the function, type_delay(), there was an error where the delay was applied and then the whole string appears at once rather than applying the delay to each character. To resolve this, flush=True was added to the print function. This meant that the print to terminal took place after each iteration of the loop rather than waiting to the end and printing at once.
+When creating the function, `type_delay()`, there was an error where the delay was applied and then the whole string appears at once rather than applying the delay to each character. To resolve this, `flush=True` was added to the print function. This meant that the print to terminal took place after each iteration of the loop rather than waiting to the end and printing at once.
 
 #### End Choice - Enter to Play Again
 
-At the end of the game, the user is given the option to pay again by clicking 'enter'. To enable this,  initially the input() function was used to receive data from the user. Upon running the game, it was found that there was not a way to stop display of all other the keys the user could press prior to clicking 'enter'.
+At the end of the game, the user is given the option to pay again by clicking 'enter'. To enable this,  initially the `input()` function was used to receive data from the user. Upon running the game, it was found that there was not a way to stop display of all other the keys the user could press prior to clicking 'enter'.
 
-After further research, a library was found which had a module called getpass which requested input from the user but did not display any visual typing. This was then used to replace the previous input() function.
+After further research, a library was found which had a module called `getpass` which requested input from the user but did not display any visual typing. This was then used to replace the previous `input()` function.
 
 ### Usability Testing
 
-- The feature of the appeared typing on the terminal is time to be quick to still maintain effect but to not hold up the user game play.
+- The feature of the appeared typing on the terminal is quick to still maintain effect but to not hold up the user game play.
 
 - The colours chosen are contrasting to enable accessibility.
 
-- User input is validated to ensure the game can process the user data, an appropriate message is then displayed to the user depending on the error occured to help the user understand the error and to not repeat again.
+- User input is validated to ensure the game can process the user data, an appropriate message is then displayed to the user depending on the error occured to help the user understand why it did not work.
 
 - All game decision points, redirects users to the correct stage.
 
@@ -181,7 +181,7 @@ To ensure the game meets the expectations of the user, please see below table of
 |  <br>UC-003     |  <br>As a user I want to be able to see how many lives I have left                                                  |  <br>TC-012                                                          |  <br>Pass    |  <br>          |
 |  <br>UC-004     |  <br>As a user I want to be able to see the incorrect guesses I have already made                                   |  <br>TC-013                                                          |  <br>Pass    |  <br>          |
 |  <br>UC-005     |  <br>As a user I want the movie title I am guessing to update with my correct guesses                               |  <br>TC-014, TC-015                                                  |  <br>Pass    |  <br>          |
-|  <br>UC-006     |  <br>As a user I want to know what the movie title is if I fail to complete it within the allocated amount of live  |  <br>TC-021                                                          |  <br>Pass    |  <br>          |
+|  <br>UC-006     |  <br>As a user I want to know what the movie title is if I fail to complete it within the allocated amount of lives  |  <br>TC-021                                                          |  <br>Pass    |  <br>          |
 |  <br>UC-007     |  <br>As a user I want to be able to measure my success to record a score                                            |  <br>TC-026, TC-027, TC-028, TC-029                                  |  <br>Pass    |  <br>          |
 |  <br>UC-008     |  <br>As a user I want to be able to see the top highscore                                                           |  <br>TC-030                                                          |  <br>Pass    |  <br>          |
 |  <br>UC-009     |  <br>As a user I want to be able to play again without restarted the program                                        |  <br>TC-022, TC-023, TC-024, TC-031, TC-032, TC-033                  |  <br>Pass    |  <br>          |
@@ -268,10 +268,10 @@ This site is deployed through Heruko. The following steps where followed within 
 - Whilst on the main dashboard, click 'Create new app'
 - Then enter the name of the project, select your region, and the click 'Create App'
 - Within the settings tab, you must update the 'Config Vars' to include the credentials required to access the google sheet.
- - Click 'Reveal Config Vars'
- - In the 'key' field enter 'CREDS'
- - Copy the your required credentials into the 'VALUE' field
- - Click 'Add'
+  - Click 'Reveal Config Vars'
+  - In the 'key' field enter 'CREDS'
+  - Copy the your required credentials into the 'VALUE' field
+  - Click 'Add'
 - Within the settings tab, add the following build packs (they must show in the following order)
   - Python
   - nodejs
@@ -296,6 +296,9 @@ To add a new branch, click 'New Branch' which is a green button
 Then name your branch and select the branch source
 
 ## Credits
+
+### HTML and CSS display of Terminal
+Code Institute template used to display python terminal game
 
 ### Google Sheets API
 
@@ -323,5 +326,5 @@ Following tutorial used to create clear function for terminal - [STechies - Pyth
 
 The following generator was used for the Ascii text in the game [ascii-generator](https://ascii-generator.site/t/) <br>
 The following blog was used as inspiration for the code to colour text in the terminal [Haoyi's Programming Blog - Build your own Command Line with ANSI escape codes](https://www.lihaoyi.com/post/BuildyourownCommandLinewithANSIescapecodes.html)
-The following youtube tutorial was used as inspiration for the code to colour text in the terminal [Learn Learn Scratch Tutorials - Python Console Colors - Easy Tutorial](https://www.youtube.com/watch?v=u4QmAIoo4i0)
+<br> The following youtube tutorial was used as inspiration for the code to colour text in the terminal [Learn Learn Scratch Tutorials - Python Console Colors - Easy Tutorial](https://www.youtube.com/watch?v=u4QmAIoo4i0)
 
