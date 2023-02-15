@@ -299,7 +299,16 @@ To see if you are in the top 10 quickest games, enter your name below
 """
     score_text = TextFormatting(score_str)
     score_text.type_delay()
-    user = input("Name => ")
+
+    while True:
+        try:
+            user = input("Name => ").strip()
+            if user == "":
+                print("Please enter your name to continue.")
+            else:
+                break
+        except ValueError():
+            print("Please enter your name to continue.")
 
     timer = int(secs)
     data = [user, timer]
