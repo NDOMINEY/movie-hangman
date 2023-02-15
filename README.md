@@ -258,10 +258,28 @@ Through exploritory testing it was uncovered that when the introduction is runni
 
 ### Main Languages Used
 - Python
-- HTML
-- CSS
+- HTML5
+- CSS3
 
 ## Deployment
+
+This site is deployed through Heruko. The following steps where followed within Heroku -
+
+- Whilst on the main dashboard, click 'Create new app'
+- Then enter the name of the project, select your region, and the click 'Create App'
+- Within the settings tab, you must update the 'Config Vars' to include the credentials required to access the google sheet.
+ - Click 'Reveal Config Vars'
+ - In the 'key' field enter 'CREDS'
+ - Copy the your required credentials into the 'VALUE' field
+ - Click 'Add'
+- Within the settings tab, add the following build packs (they must show in the following order)
+  - Python
+  - nodejs
+- In the deploy tab, under deployment method select 'GitHub'
+- Next search and connect to the correct repository from GitHub
+- Finally, scroll down towards the bottom and you will see 'Manual Deployment'. Select the branch you would like to deploy from and click 'Deploy Branch'. Once complete, you will be presented with a link to open the deployed site.
+
+You can also set up auto deployments, this means Heroku will re-deploy the site every time you push an update to your GitHub repository. 
 
 #### Future development
 
